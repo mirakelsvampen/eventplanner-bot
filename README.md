@@ -1,12 +1,13 @@
-raidbot
+eventplanner-bot
 =========
 
-A simple bot for managing custom made lobbies. I started this project to allow discord users of a Destiny 2 clan to sign up for weekly events. I wanted the bot to be as generic as possible with highly customizable lobbies. In that way the bot can be used for whatever event the user desires.
+A simple bot creating upcoming events and allows users to sign-up to lobby like structures.
+The bot is commanded with text chat and also performs some background tasks such as cleaning invalid lobbies
 
 Requirements
 ------------
 
-This runs on Python version 3.7 and depends on the following libraries:
+This runs on Python version 3.9 and depends on the following libraries:
 
 ```python
 discord.py
@@ -29,24 +30,19 @@ To simply run this bot you can execute `./main.py` after editing the `settings.j
 
 ```json
 {   
-    "client": { # app settings which can be acquired on the developer discord homepage
+    "client": {// app settings which can be acquired on the developer discord homepage
         "id": "",
         "secret": "",
         "bot_token": ""
     },
     "database": {
-        "ip": "database", # can be a hostname, which is pretty handy when running docker
-        "user": "root", # username for database access
-        "password": "Syp9393", # password for aforementioned user
-        "port": "3306" # port which mysql is listening on
+        "ip": "database", // can be a hostname, which is pretty handy when running docker
+        "user": "root", // username for database access
+        "password": "Syp9393", // password for aforementioned user
+        "port": "3306" // port which mysql is listening on
     }
 }
 ```
-
-Example client side usage
-----------------
-
-TODO: insert gif here.
 
 ## Future plans
 
@@ -55,3 +51,4 @@ Since this project in work in progress there are many future plans; the followin
 *  Automatically clean up lobbies which are older than X days.
 *  Add leader promotion
 *  Add kick member support
+*  Maybe use it for some python/javascript fullstack projects since the database structure is noob friendly
