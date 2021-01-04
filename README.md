@@ -28,7 +28,7 @@ A description of the settable variables for this role should go here, including 
 
 To simply run this bot you can execute `./main.py` after editing the `settings.json` file according to your settings. Take a look at the following example for configuring settings:
 
-```json
+```jsonc
 {   
     "client": {// app settings which can be acquired on the developer discord homepage
         "id": "",
