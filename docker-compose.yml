@@ -1,0 +1,31 @@
+---
+version: "2"
+services:
+
+  app:
+    container_name: app
+    build: .
+    volumes: 
+      - .:/usr/src/app
+    networks:
+      back:
+        ipv4_address: 172.16.10.3
+
+  db:
+    container_name: database
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Syp9393
+    ports:
+      - 3306:3306
+    networks:
+      back:
+        ipv4_address: 172.16.10.2
+
+networks:
+  back:
+    ipam:
+      config:
+        - subnet: 172.16.10.0/24

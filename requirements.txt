@@ -1,0 +1,4 @@
+discord.py
+mysqlclient
+sqlalchemy
+sqlalchemy-utils
